@@ -1,0 +1,35 @@
+# Vietnam Air Quality & Weather Analytics - Python dependencies
+#
+# Weather ingestion (Open-Meteo) - required by the openmeteo sample script:
+#   openmeteo-requests, pandas, requests-cache, retry-requests
+
+# --- Weather ingestion (Open-Meteo) ---
+openmeteo-requests
+requests-cache
+retry-requests
+
+# --- Data handling / lake (Parquet) ---
+pandas
+numpy
+pyarrow
+
+# --- HTTP + env config ---
+requests
+python-dotenv
+
+# --- Air quality ingestion (OpenAQ v3) ---
+# (plain `requests` above is enough; auth is X-API-Key header)
+
+# --- Warehouse access (Postgres) ---
+psycopg2-binary
+sqlalchemy
+
+# --- Dashboard (Streamlit) ---
+streamlit
+plotly
+
+# --- Transformation (dbt) ---
+dbt-postgres
+
+# --- Tests ---
+pytest

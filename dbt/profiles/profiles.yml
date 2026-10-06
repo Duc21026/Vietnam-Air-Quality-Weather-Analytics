@@ -1,0 +1,13 @@
+vietnam_air_quality:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('WAREHOUSE_HOST', 'localhost') }}"
+      port: "{{ env_var('WAREHOUSE_PORT', '5432') | int }}"
+      user: "{{ env_var('POSTGRES_USER', 'vt_analytics') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'change_me') }}"
+      dbname: "{{ env_var('POSTGRES_DB', 'vietnam_air_quality') }}"
+      schema: analytics
+      threads: 4
+      keepalives_idle: 0
