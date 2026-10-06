@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_air_quality
+      - name: raw_weather
+
+models:
+  - name: stg_air_quality
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: timestamp_utc
+        tests:
+          - not_null
+      - name: city
+        tests:
+          - not_null
+      - name: parameter
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['pm25', 'pm10', 'pm1', 'co', 'no2', 'o3', 'so2']
+  - name: stg_weather
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: timestamp
+        tests:
+          - not_null
+      - name: city
+        tests:
+          - not_null

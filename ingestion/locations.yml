@@ -1,0 +1,70 @@
+# Monitoring location settings for ingestion (OpenAQ)
+# Verified 2026-10-06 with `python research/check_openaq.py --probe` (OpenAQ API v3).
+# Fields: city, location_id, location_name, coordinates, sensors, parameters
+
+cities:
+  - city: Hanoi
+    country: VN
+    locations:
+      - location_id: 4946813
+        location_name: "Số 1 đường Giải Phóng - phường Bạch Mai - ĐHBK"
+        coordinates:
+          latitude: 21.0052
+          longitude: 105.8418
+        sensors:
+          - sensor_id: 13502154
+            parameter: pm25
+            unit: "µg/m³"
+          - sensor_id: 13502152
+            parameter: pm10
+            unit: "µg/m³"
+        parameters:
+          - pm25
+          - pm10
+        first_observation_utc: "2025-07-03T15:40:00Z"
+        last_observation_utc: "2026-10-06T07:35:00Z"
+        notes: Active government monitor, hourly PM2.5 + PM10.
+
+      - location_id: 6123215
+        location_name: OceanPark
+        coordinates:
+          latitude: 20.9933
+          longitude: 105.9441
+        sensors:
+          - sensor_id: 14581375
+            parameter: pm25
+            unit: "µg/m³"
+        parameters:
+          - pm25
+        first_observation_utc: "2025-11-08T06:00:00Z"
+        last_observation_utc: "2026-10-06T07:00:00Z"
+        notes: Active low-cost sensor, hourly PM2.5 only (no PM10).
+
+  - city: Ho Chi Minh City
+    country: VN
+    locations:
+      - location_id: 3276359
+        location_name: CMT8
+        coordinates:
+          latitude: 10.78533
+          longitude: 106.67029
+        sensors:
+          - sensor_id: 11357424
+            parameter: pm25
+            unit: "µg/m³"
+        parameters:
+          - pm25
+        first_observation_utc: "2024-11-19T11:00:00Z"
+        last_observation_utc: "2026-10-06T07:00:00Z"
+        notes: Active PM2.5. PM10 sensor 11357395 exists but reports no
+          recent hourly values, so PM10 is excluded for HCMC.
+
+# Weather settings (Open-Meteo), one point per city
+weather_variables:
+  - temperature
+  - relative_humidity
+  - precipitation
+  - wind_speed
+  - surface_pressure
+
+time_granularity: hourly

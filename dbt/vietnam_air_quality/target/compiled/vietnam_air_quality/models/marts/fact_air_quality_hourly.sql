@@ -1,0 +1,1 @@
+SELECT * FROM "vietnam_air_quality"."analytics_intermediate"."int_hourly_air_quality"

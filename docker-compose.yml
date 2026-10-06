@@ -1,0 +1,161 @@
+x-airflow-common-env: &airflow-common-env
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${AIRFLOW_DB_USER:-airflow}:${AIRFLOW_DB_PASSWORD:-airflow}@airflow-db:5432/${AIRFLOW_DB:-airflow}
+  AIRFLOW__CORE__EXECUTOR: LocalExecutor
+  AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+  AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:-}
+  AIRFLOW__CORE__DEFAULT_TIMEZONE: utc
+  AIRFLOW__LOGGING__LOGGING_LEVEL: INFO
+  AIRFLOW__LOGGING__LOG_FILENAME_TEMPLATE: "{{ ti.dag_id }}/{{ ti.run_id | replace(':', '-') }}/{{ ti.task_id }}/{{ try_number }}.log"
+  AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "false"
+  WAREHOUSE_HOST: warehouse-db
+  WAREHOUSE_PORT: "5432"
+  POSTGRES_USER: ${POSTGRES_USER:-vt_analytics}
+  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
+  POSTGRES_DB: ${POSTGRES_DB:-vietnam_air_quality}
+  OPENAQ_API_KEY: ${OPENAQ_API_KEY:-}
+  PYTHONPATH: /opt/airflow/code
+
+x-airflow-common: &airflow-common
+  build:
+    context: .
+    dockerfile: airflow/Dockerfile
+  environment:
+    <<: *airflow-common-env
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/logs:/opt/airflow/logs
+    - ./airflow/plugins:/opt/airflow/plugins
+    - ./ingestion:/opt/airflow/code/ingestion
+    - ./lake:/opt/airflow/code/lake
+    - ./dbt:/opt/airflow/code/dbt
+    - ./.env:/opt/airflow/code/.env:ro
+  depends_on:
+    airflow-db:
+      condition: service_healthy
+    warehouse-db:
+      condition: service_healthy
+  restart: unless-stopped
+
+services:
+  # ---------- Warehouse ----------
+  warehouse-db:
+    image: postgres:16
+    container_name: vaq_warehouse_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-vt_analytics}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
+      POSTGRES_DB: ${POSTGRES_DB:-vietnam_air_quality}
+    ports:
+      - "5432:5432"
+    volumes:
+      - warehouse_data:/var/lib/postgresql/data
+      - ./warehouse/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-vt_analytics} -d ${POSTGRES_DB:-vietnam_air_quality}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  # ---------- Airflow metadata DB ----------
+  airflow-db:
+    image: postgres:16
+    container_name: vaq_airflow_db
+    environment:
+      POSTGRES_USER: ${AIRFLOW_DB_USER:-airflow}
+      POSTGRES_PASSWORD: ${AIRFLOW_DB_PASSWORD:-airflow}
+      POSTGRES_DB: ${AIRFLOW_DB:-airflow}
+    volumes:
+      - airflow_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${AIRFLOW_DB_USER:-airflow} -d ${AIRFLOW_DB:-airflow}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  # ---------- Airflow ----------
+  airflow-init:
+    <<: *airflow-common
+    container_name: vaq_airflow_init
+    command: ["bash", "-c", "airflow db migrate && airflow users create --username ${AIRFLOW_ADMIN_USERNAME:-admin} --password ${AIRFLOW_ADMIN_PASSWORD:-admin} --firstname Admin --lastname User --role Admin --email admin@example.com || true"]
+    restart: "no"
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: vaq_airflow_webserver
+    command: airflow webserver --port 8080
+    ports:
+      - "${AIRFLOW_PORT:-8080}:8080"
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: vaq_airflow_scheduler
+    command: airflow scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  # ---------- Ingestion (manual / run-once) ----------
+  ingestion:
+    <<: *airflow-common
+    container_name: vaq_ingestion
+    profiles: ["tools"]
+    command: python -c "print('ingestion entrypoint - set command in docker-compose override')"
+
+  # ---------- dbt ----------
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vaq_dbt
+    profiles: ["tools"]
+    environment:
+      WAREHOUSE_HOST: warehouse-db
+      WAREHOUSE_PORT: "5432"
+      POSTGRES_USER: ${POSTGRES_USER:-vt_analytics}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
+      POSTGRES_DB: ${POSTGRES_DB:-vietnam_air_quality}
+      DBT_PROFILES_DIR: /app/dbt/profiles
+    volumes:
+      - ./dbt:/app/dbt
+      - ./warehouse:/app/warehouse
+    depends_on:
+      warehouse-db:
+        condition: service_healthy
+    command: dbt --version
+
+  # ---------- Dashboard ----------
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vaq_dashboard
+    environment:
+      WAREHOUSE_HOST: warehouse-db
+      WAREHOUSE_PORT: "5432"
+      POSTGRES_USER: ${POSTGRES_USER:-vt_analytics}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
+      POSTGRES_DB: ${POSTGRES_DB:-vietnam_air_quality}
+      OPENAQ_API_KEY: ${OPENAQ_API_KEY:-}
+    ports:
+      - "${DASHBOARD_PORT:-8501}:8501"
+    volumes:
+      - ./lake:/app/lake
+      - ./dashboard:/app/dashboard
+    depends_on:
+      warehouse-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  warehouse_data:
+  airflow_db_data:
