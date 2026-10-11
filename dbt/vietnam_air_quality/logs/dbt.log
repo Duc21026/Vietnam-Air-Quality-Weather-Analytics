@@ -4051,3 +4051,1340 @@ having count(*) > 1
 [0m08:02:23.905489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74a674e450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74a699e550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ab394c90>]}
 [0m08:02:23.906085 [debug] [MainThread]: Flushing usage events
 [0m08:02:25.183122 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:18:49.382788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffa15e190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffccfa050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffa15e350>]}
+
+
+============================== 16:18:49.389211 | e8455d05-1e85-46ad-9e5f-1dc5af5d66b9 ==============================
+[0m16:18:49.389211 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:18:49.389935 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'log_path': '/opt/airflow/code/dbt/vietnam_air_quality/logs', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'empty': 'False', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/code/dbt/profiles --project-dir /opt/airflow/code/dbt/vietnam_air_quality', 'target_path': 'None', 'profiles_dir': '/opt/airflow/code/dbt/profiles', 'hints_enabled': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'cache_selected_only': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'version_check': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'write_json': 'True'}
+[0m16:18:49.595497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffa164510>]}
+[0m16:18:49.671214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffcd11790>]}
+[0m16:18:49.674289 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m16:18:49.791654 [debug] [MainThread]: checksum: 0939ea72253789066c52afdf564c89d2a6053675aa36a0867826a9fdd7a38f70, vars: {}, profile: vietnam_air_quality, target: dev, version: 1.12.5
+[0m16:18:49.940109 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:18:49.941144 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:18:49.941968 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:18:49.952190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff9ae34d0>]}
+[0m16:18:50.109107 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/manifest.json
+[0m16:18:50.111454 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/semantic_manifest.json
+[0m16:18:50.127160 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/code/dbt/vietnam_air_quality/target/osi_document.json
+[0m16:18:50.147096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff839e5d0>]}
+[0m16:18:50.147974 [info ] [MainThread]: Found 8 models, 10 data tests, 2 sources, 477 macros
+[0m16:18:50.148484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff87fd0d0>]}
+[0m16:18:50.150723 [info ] [MainThread]: 
+[0m16:18:50.151254 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:18:50.151672 [info ] [MainThread]: 
+[0m16:18:50.152372 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:18:50.157412 [debug] [ThreadPool]: Acquiring new postgres connection 'list_vietnam_air_quality'
+[0m16:18:50.158550 [debug] [ThreadPool]: Acquiring new postgres connection 'list_vietnam_air_quality'
+[0m16:18:50.159708 [debug] [ThreadPool]: Acquiring new postgres connection 'list_vietnam_air_quality'
+[0m16:18:50.206054 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality"
+[0m16:18:50.206663 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality"
+[0m16:18:50.207418 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality"
+[0m16:18:50.208340 [debug] [ThreadPool]: On list_vietnam_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:18:50.209049 [debug] [ThreadPool]: On list_vietnam_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:18:50.210020 [debug] [ThreadPool]: On list_vietnam_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:18:50.210867 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:18:50.211635 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:18:50.212514 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:18:50.226004 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.015 seconds
+[0m16:18:50.226986 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.015 seconds
+[0m16:18:50.227944 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.015 seconds
+[0m16:18:50.230365 [debug] [ThreadPool]: On list_vietnam_air_quality: Close
+[0m16:18:50.233782 [debug] [ThreadPool]: On list_vietnam_air_quality: Close
+[0m16:18:50.236676 [debug] [ThreadPool]: On list_vietnam_air_quality: Close
+[0m16:18:50.242018 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_vietnam_air_quality, now list_vietnam_air_quality_analytics_analytics)
+[0m16:18:50.243414 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_vietnam_air_quality, now list_vietnam_air_quality_analytics_intermediate)
+[0m16:18:50.245194 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_vietnam_air_quality, now list_vietnam_air_quality_analytics_staging)
+[0m16:18:50.254022 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality_analytics_analytics"
+[0m16:18:50.257510 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality_analytics_intermediate"
+[0m16:18:50.260811 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality_analytics_staging"
+[0m16:18:50.262322 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality_analytics_analytics"} */
+select
+      'vietnam_air_quality' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select distinct
+     'vietnam_air_quality' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_analytics'
+  
+[0m16:18:50.264524 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality_analytics_intermediate"} */
+select
+      'vietnam_air_quality' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_intermediate'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_intermediate'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_intermediate'
+    union all
+    select distinct
+     'vietnam_air_quality' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_intermediate'
+  
+[0m16:18:50.266397 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality_analytics_staging"} */
+select
+      'vietnam_air_quality' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+    union all
+    select distinct
+     'vietnam_air_quality' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_staging'
+  
+[0m16:18:50.267634 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:18:50.268393 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:18:50.269984 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:18:50.286529 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.018 seconds
+[0m16:18:50.287146 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.017 seconds
+[0m16:18:50.287777 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.020 seconds
+[0m16:18:50.289311 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_intermediate: ROLLBACK
+[0m16:18:50.290867 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_staging: ROLLBACK
+[0m16:18:50.292838 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_analytics: ROLLBACK
+[0m16:18:50.293645 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_intermediate: Close
+[0m16:18:50.294140 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_staging: Close
+[0m16:18:50.294655 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_analytics: Close
+[0m16:18:50.301530 [debug] [MainThread]: Using postgres connection "master"
+[0m16:18:50.302408 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:18:50.302951 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:18:50.313395 [debug] [MainThread]: SQL status: SELECT 5 in 0.010 seconds
+[0m16:18:50.315802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff9718ed0>]}
+[0m16:18:50.316548 [debug] [MainThread]: On master: ROLLBACK
+[0m16:18:50.317265 [debug] [MainThread]: On master: COMMIT
+[0m16:18:50.317752 [debug] [MainThread]: Using postgres connection "master"
+[0m16:18:50.318260 [debug] [MainThread]: On master: COMMIT
+[0m16:18:50.318889 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:18:50.319337 [debug] [MainThread]: On master: Close
+[0m16:18:50.326270 [debug] [Thread-1 (]: Began running node model.vietnam_air_quality.stg_air_quality
+[0m16:18:50.327012 [debug] [Thread-2 (]: Began running node model.vietnam_air_quality.stg_weather
+[0m16:18:50.328079 [info ] [Thread-1 (]: 1 of 8 START sql view model analytics_staging.stg_air_quality .................. [RUN]
+[0m16:18:50.329128 [info ] [Thread-2 (]: 2 of 8 START sql view model analytics_staging.stg_weather ...................... [RUN]
+[0m16:18:50.330203 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_vietnam_air_quality_analytics_analytics, now model.vietnam_air_quality.stg_air_quality)
+[0m16:18:50.331055 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_vietnam_air_quality_analytics_staging, now model.vietnam_air_quality.stg_weather)
+[0m16:18:50.331883 [debug] [Thread-1 (]: Began compiling node model.vietnam_air_quality.stg_air_quality
+[0m16:18:50.332751 [debug] [Thread-2 (]: Began compiling node model.vietnam_air_quality.stg_weather
+[0m16:18:50.343677 [debug] [Thread-1 (]: Writing injected SQL for node "model.vietnam_air_quality.stg_air_quality"
+[0m16:18:50.347148 [debug] [Thread-2 (]: Writing injected SQL for node "model.vietnam_air_quality.stg_weather"
+[0m16:18:50.349251 [debug] [Thread-1 (]: Began executing node model.vietnam_air_quality.stg_air_quality
+[0m16:18:50.350211 [debug] [Thread-2 (]: Began executing node model.vietnam_air_quality.stg_weather
+[0m16:18:50.411012 [debug] [Thread-2 (]: Writing runtime sql for node "model.vietnam_air_quality.stg_weather"
+[0m16:18:50.416255 [debug] [Thread-1 (]: Writing runtime sql for node "model.vietnam_air_quality.stg_air_quality"
+[0m16:18:50.418131 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.stg_weather"
+[0m16:18:50.418969 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.stg_air_quality"
+[0m16:18:50.420096 [debug] [Thread-2 (]: On model.vietnam_air_quality.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_weather"} */
+
+  create view "vietnam_air_quality"."analytics_staging"."stg_weather__dbt_tmp"
+    
+    
+  as (
+    with source AS (
+    SELECT * FROM "vietnam_air_quality"."raw"."raw_weather"
+),
+
+renamed AS (
+    SELECT
+        id,
+        city,
+        latitude,
+        longitude,
+        timestamp,
+        temperature,
+        relative_humidity,
+        precipitation,
+        wind_speed,
+        wind_direction,
+        surface_pressure,
+        source,
+        ingested_at
+    FROM source
+)
+
+SELECT * FROM renamed
+  );
+[0m16:18:50.420985 [debug] [Thread-1 (]: On model.vietnam_air_quality.stg_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_air_quality"} */
+
+  create view "vietnam_air_quality"."analytics_staging"."stg_air_quality__dbt_tmp"
+    
+    
+  as (
+    WITH source AS (
+    SELECT * FROM "vietnam_air_quality"."raw"."raw_air_quality"
+),
+
+renamed AS (
+    SELECT
+        id,
+        location_id,
+        location_name,
+        city,
+        sensor_id,
+        parameter,
+        value,
+        unit,
+        timestamp_utc,
+        latitude,
+        longitude,
+        source,
+        ingested_at
+    FROM source
+)
+
+SELECT * FROM renamed
+  );
+[0m16:18:50.421955 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:18:50.423097 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:50.437270 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.015 seconds
+[0m16:18:50.438000 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.015 seconds
+[0m16:18:50.448886 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.stg_weather"
+[0m16:18:50.453093 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.stg_air_quality"
+[0m16:18:50.454453 [debug] [Thread-2 (]: On model.vietnam_air_quality.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_weather"} */
+alter table "vietnam_air_quality"."analytics_staging"."stg_weather" rename to "stg_weather__dbt_backup"
+[0m16:18:50.455515 [debug] [Thread-1 (]: On model.vietnam_air_quality.stg_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_air_quality"} */
+alter table "vietnam_air_quality"."analytics_staging"."stg_air_quality" rename to "stg_air_quality__dbt_backup"
+[0m16:18:50.457317 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.457898 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.460897 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.stg_air_quality"
+[0m16:18:50.466423 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.stg_weather"
+[0m16:18:50.468294 [debug] [Thread-1 (]: On model.vietnam_air_quality.stg_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_air_quality"} */
+alter table "vietnam_air_quality"."analytics_staging"."stg_air_quality__dbt_tmp" rename to "stg_air_quality"
+[0m16:18:50.470661 [debug] [Thread-2 (]: On model.vietnam_air_quality.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_weather"} */
+alter table "vietnam_air_quality"."analytics_staging"."stg_weather__dbt_tmp" rename to "stg_weather"
+[0m16:18:50.473425 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.474672 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m16:18:50.522878 [debug] [Thread-1 (]: On model.vietnam_air_quality.stg_air_quality: COMMIT
+[0m16:18:50.527376 [debug] [Thread-2 (]: On model.vietnam_air_quality.stg_weather: COMMIT
+[0m16:18:50.529023 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.stg_air_quality"
+[0m16:18:50.529828 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.stg_weather"
+[0m16:18:50.530526 [debug] [Thread-1 (]: On model.vietnam_air_quality.stg_air_quality: COMMIT
+[0m16:18:50.531170 [debug] [Thread-2 (]: On model.vietnam_air_quality.stg_weather: COMMIT
+[0m16:18:50.533234 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m16:18:50.539997 [debug] [Thread-2 (]: SQL status: COMMIT in 0.008 seconds
+[0m16:18:50.543082 [debug] [Thread-1 (]: Applying DROP to: "vietnam_air_quality"."analytics_staging"."stg_air_quality__dbt_backup"
+[0m16:18:50.545576 [debug] [Thread-2 (]: Applying DROP to: "vietnam_air_quality"."analytics_staging"."stg_weather__dbt_backup"
+[0m16:18:50.551382 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.stg_air_quality"
+[0m16:18:50.552587 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.stg_weather"
+[0m16:18:50.553338 [debug] [Thread-1 (]: On model.vietnam_air_quality.stg_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_air_quality"} */
+drop view if exists "vietnam_air_quality"."analytics_staging"."stg_air_quality__dbt_backup" cascade
+[0m16:18:50.553902 [debug] [Thread-2 (]: On model.vietnam_air_quality.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.stg_weather"} */
+drop view if exists "vietnam_air_quality"."analytics_staging"."stg_weather__dbt_backup" cascade
+[0m16:18:50.558178 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m16:18:50.561050 [debug] [Thread-2 (]: On model.vietnam_air_quality.stg_weather: Close
+[0m16:18:50.561615 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.007 seconds
+[0m16:18:50.565476 [debug] [Thread-1 (]: On model.vietnam_air_quality.stg_air_quality: Close
+[0m16:18:50.565945 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff617e1d0>]}
+[0m16:18:50.566887 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff61c5dd0>]}
+[0m16:18:50.567800 [info ] [Thread-2 (]: 2 of 8 OK created sql view model analytics_staging.stg_weather ................. [[32mCREATE VIEW[0m in 0.23s]
+[0m16:18:50.568762 [info ] [Thread-1 (]: 1 of 8 OK created sql view model analytics_staging.stg_air_quality ............. [[32mCREATE VIEW[0m in 0.24s]
+[0m16:18:50.570444 [debug] [Thread-2 (]: Finished running node model.vietnam_air_quality.stg_weather
+[0m16:18:50.571784 [debug] [Thread-1 (]: Finished running node model.vietnam_air_quality.stg_air_quality
+[0m16:18:50.573527 [debug] [Thread-4 (]: Began running node model.vietnam_air_quality.fact_weather_hourly
+[0m16:18:50.574717 [debug] [Thread-3 (]: Began running node model.vietnam_air_quality.int_hourly_air_quality
+[0m16:18:50.576813 [info ] [Thread-4 (]: 3 of 8 START sql table model analytics_analytics.fact_weather_hourly ........... [RUN]
+[0m16:18:50.578537 [info ] [Thread-3 (]: 4 of 8 START sql view model analytics_intermediate.int_hourly_air_quality ...... [RUN]
+[0m16:18:50.580587 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.vietnam_air_quality.fact_weather_hourly'
+[0m16:18:50.582787 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_vietnam_air_quality_analytics_intermediate, now model.vietnam_air_quality.int_hourly_air_quality)
+[0m16:18:50.584473 [debug] [Thread-4 (]: Began compiling node model.vietnam_air_quality.fact_weather_hourly
+[0m16:18:50.585825 [debug] [Thread-3 (]: Began compiling node model.vietnam_air_quality.int_hourly_air_quality
+[0m16:18:50.591454 [debug] [Thread-4 (]: Writing injected SQL for node "model.vietnam_air_quality.fact_weather_hourly"
+[0m16:18:50.596096 [debug] [Thread-3 (]: Writing injected SQL for node "model.vietnam_air_quality.int_hourly_air_quality"
+[0m16:18:50.599652 [debug] [Thread-4 (]: Began executing node model.vietnam_air_quality.fact_weather_hourly
+[0m16:18:50.600824 [debug] [Thread-3 (]: Began executing node model.vietnam_air_quality.int_hourly_air_quality
+[0m16:18:50.639106 [debug] [Thread-3 (]: Writing runtime sql for node "model.vietnam_air_quality.int_hourly_air_quality"
+[0m16:18:50.640407 [debug] [Thread-4 (]: Writing runtime sql for node "model.vietnam_air_quality.fact_weather_hourly"
+[0m16:18:50.643294 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.int_hourly_air_quality"
+[0m16:18:50.644262 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.fact_weather_hourly"
+[0m16:18:50.645037 [debug] [Thread-3 (]: On model.vietnam_air_quality.int_hourly_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.int_hourly_air_quality"} */
+
+  create view "vietnam_air_quality"."analytics_intermediate"."int_hourly_air_quality__dbt_tmp"
+    
+    
+  as (
+    WITH air_quality AS (
+    SELECT * FROM "vietnam_air_quality"."analytics_staging"."stg_air_quality"
+),
+
+pivoted AS (
+    SELECT
+        timestamp_utc,
+        city,
+        location_id,
+        location_name,
+        sensor_id,
+        latitude,
+        longitude,
+        MAX(CASE WHEN parameter = 'pm25' THEN value END) AS pm25,
+        MAX(CASE WHEN parameter = 'pm10' THEN value END) AS pm10,
+        MAX(CASE WHEN parameter = 'pm25' THEN unit END) AS pm25_unit,
+        MAX(CASE WHEN parameter = 'pm10' THEN unit END) AS pm10_unit
+    FROM air_quality
+    GROUP BY timestamp_utc, city, location_id, location_name, sensor_id, latitude, longitude
+)
+
+SELECT * FROM pivoted
+  );
+[0m16:18:50.646581 [debug] [Thread-4 (]: On model.vietnam_air_quality.fact_weather_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_weather_hourly"} */
+
+  
+    
+
+  create  table "vietnam_air_quality"."analytics_analytics"."fact_weather_hourly__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * FROM "vietnam_air_quality"."analytics_staging"."stg_weather"
+  );
+  
+[0m16:18:50.647542 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:18:50.648558 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:18:50.663079 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.015 seconds
+[0m16:18:50.667787 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.int_hourly_air_quality"
+[0m16:18:50.668792 [debug] [Thread-4 (]: SQL status: SELECT 6048 in 0.020 seconds
+[0m16:18:50.669563 [debug] [Thread-3 (]: On model.vietnam_air_quality.int_hourly_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.int_hourly_air_quality"} */
+alter table "vietnam_air_quality"."analytics_intermediate"."int_hourly_air_quality__dbt_tmp" rename to "int_hourly_air_quality"
+[0m16:18:50.679653 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.fact_weather_hourly"
+[0m16:18:50.681358 [debug] [Thread-4 (]: On model.vietnam_air_quality.fact_weather_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_weather_hourly"} */
+alter table "vietnam_air_quality"."analytics_analytics"."fact_weather_hourly" rename to "fact_weather_hourly__dbt_backup"
+[0m16:18:50.682196 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.685410 [debug] [Thread-3 (]: On model.vietnam_air_quality.int_hourly_air_quality: COMMIT
+[0m16:18:50.686214 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m16:18:50.687117 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.int_hourly_air_quality"
+[0m16:18:50.691248 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.fact_weather_hourly"
+[0m16:18:50.692162 [debug] [Thread-3 (]: On model.vietnam_air_quality.int_hourly_air_quality: COMMIT
+[0m16:18:50.692997 [debug] [Thread-4 (]: On model.vietnam_air_quality.fact_weather_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_weather_hourly"} */
+alter table "vietnam_air_quality"."analytics_analytics"."fact_weather_hourly__dbt_tmp" rename to "fact_weather_hourly"
+[0m16:18:50.694354 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m16:18:50.697325 [debug] [Thread-4 (]: On model.vietnam_air_quality.fact_weather_hourly: COMMIT
+[0m16:18:50.697950 [debug] [Thread-3 (]: SQL status: COMMIT in 0.004 seconds
+[0m16:18:50.698822 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.fact_weather_hourly"
+[0m16:18:50.701342 [debug] [Thread-3 (]: Applying DROP to: "vietnam_air_quality"."analytics_intermediate"."int_hourly_air_quality__dbt_backup"
+[0m16:18:50.702719 [debug] [Thread-4 (]: On model.vietnam_air_quality.fact_weather_hourly: COMMIT
+[0m16:18:50.705755 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.int_hourly_air_quality"
+[0m16:18:50.707685 [debug] [Thread-3 (]: On model.vietnam_air_quality.int_hourly_air_quality: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.int_hourly_air_quality"} */
+drop view if exists "vietnam_air_quality"."analytics_intermediate"."int_hourly_air_quality__dbt_backup" cascade
+[0m16:18:50.708455 [debug] [Thread-4 (]: SQL status: COMMIT in 0.002 seconds
+[0m16:18:50.713736 [debug] [Thread-4 (]: Applying DROP to: "vietnam_air_quality"."analytics_analytics"."fact_weather_hourly__dbt_backup"
+[0m16:18:50.714653 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.005 seconds
+[0m16:18:50.721273 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.fact_weather_hourly"
+[0m16:18:50.724210 [debug] [Thread-3 (]: On model.vietnam_air_quality.int_hourly_air_quality: Close
+[0m16:18:50.725281 [debug] [Thread-4 (]: On model.vietnam_air_quality.fact_weather_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_weather_hourly"} */
+drop table if exists "vietnam_air_quality"."analytics_analytics"."fact_weather_hourly__dbt_backup" cascade
+[0m16:18:50.727691 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff617afd0>]}
+[0m16:18:50.729980 [info ] [Thread-3 (]: 4 of 8 OK created sql view model analytics_intermediate.int_hourly_air_quality . [[32mCREATE VIEW[0m in 0.15s]
+[0m16:18:50.731942 [debug] [Thread-3 (]: Finished running node model.vietnam_air_quality.int_hourly_air_quality
+[0m16:18:50.733666 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m16:18:50.734840 [debug] [Thread-1 (]: Began running node model.vietnam_air_quality.fact_air_quality_hourly
+[0m16:18:50.735761 [debug] [Thread-2 (]: Began running node model.vietnam_air_quality.int_air_quality_weather
+[0m16:18:50.738865 [debug] [Thread-4 (]: On model.vietnam_air_quality.fact_weather_hourly: Close
+[0m16:18:50.740269 [info ] [Thread-1 (]: 5 of 8 START sql table model analytics_analytics.fact_air_quality_hourly ....... [RUN]
+[0m16:18:50.741665 [info ] [Thread-2 (]: 6 of 8 START sql view model analytics_intermediate.int_air_quality_weather ..... [RUN]
+[0m16:18:50.743558 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff6126f90>]}
+[0m16:18:50.744606 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vietnam_air_quality.stg_air_quality, now model.vietnam_air_quality.fact_air_quality_hourly)
+[0m16:18:50.745763 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.vietnam_air_quality.stg_weather, now model.vietnam_air_quality.int_air_quality_weather)
+[0m16:18:50.747278 [info ] [Thread-4 (]: 3 of 8 OK created sql table model analytics_analytics.fact_weather_hourly ...... [[32mSELECT 6048[0m in 0.16s]
+[0m16:18:50.748230 [debug] [Thread-1 (]: Began compiling node model.vietnam_air_quality.fact_air_quality_hourly
+[0m16:18:50.749372 [debug] [Thread-2 (]: Began compiling node model.vietnam_air_quality.int_air_quality_weather
+[0m16:18:50.751094 [debug] [Thread-4 (]: Finished running node model.vietnam_air_quality.fact_weather_hourly
+[0m16:18:50.754402 [debug] [Thread-1 (]: Writing injected SQL for node "model.vietnam_air_quality.fact_air_quality_hourly"
+[0m16:18:50.758292 [debug] [Thread-2 (]: Writing injected SQL for node "model.vietnam_air_quality.int_air_quality_weather"
+[0m16:18:50.760192 [debug] [Thread-1 (]: Began executing node model.vietnam_air_quality.fact_air_quality_hourly
+[0m16:18:50.766117 [debug] [Thread-1 (]: Writing runtime sql for node "model.vietnam_air_quality.fact_air_quality_hourly"
+[0m16:18:50.766844 [debug] [Thread-2 (]: Began executing node model.vietnam_air_quality.int_air_quality_weather
+[0m16:18:50.772616 [debug] [Thread-2 (]: Writing runtime sql for node "model.vietnam_air_quality.int_air_quality_weather"
+[0m16:18:50.773487 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.fact_air_quality_hourly"
+[0m16:18:50.774540 [debug] [Thread-1 (]: On model.vietnam_air_quality.fact_air_quality_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_air_quality_hourly"} */
+
+  
+    
+
+  create  table "vietnam_air_quality"."analytics_analytics"."fact_air_quality_hourly__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT * FROM "vietnam_air_quality"."analytics_intermediate"."int_hourly_air_quality"
+  );
+  
+[0m16:18:50.775395 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.int_air_quality_weather"
+[0m16:18:50.775987 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:50.777206 [debug] [Thread-2 (]: On model.vietnam_air_quality.int_air_quality_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.int_air_quality_weather"} */
+
+  create view "vietnam_air_quality"."analytics_intermediate"."int_air_quality_weather__dbt_tmp"
+    
+    
+  as (
+    WITH air_quality AS (
+    SELECT * FROM "vietnam_air_quality"."analytics_intermediate"."int_hourly_air_quality"
+),
+
+weather AS (
+    SELECT * FROM "vietnam_air_quality"."analytics_staging"."stg_weather"
+),
+
+joined AS (
+    SELECT
+        aq.timestamp_utc,
+        aq.city,
+        aq.location_id,
+        aq.location_name,
+        aq.sensor_id,
+        aq.pm25,
+        aq.pm10,
+        aq.pm25_unit,
+        aq.pm10_unit,
+        wx.temperature,
+        wx.relative_humidity,
+        wx.precipitation,
+        wx.wind_speed,
+        wx.wind_direction,
+        wx.surface_pressure
+    FROM air_quality aq
+    LEFT JOIN weather wx
+        ON aq.city = wx.city
+        AND aq.timestamp_utc = wx.timestamp
+)
+
+SELECT * FROM joined
+  );
+[0m16:18:50.778654 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:18:50.790509 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.012 seconds
+[0m16:18:50.796207 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.int_air_quality_weather"
+[0m16:18:50.797371 [debug] [Thread-2 (]: On model.vietnam_air_quality.int_air_quality_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.int_air_quality_weather"} */
+alter table "vietnam_air_quality"."analytics_intermediate"."int_air_quality_weather__dbt_tmp" rename to "int_air_quality_weather"
+[0m16:18:50.799392 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.802791 [debug] [Thread-2 (]: On model.vietnam_air_quality.int_air_quality_weather: COMMIT
+[0m16:18:50.803810 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.int_air_quality_weather"
+[0m16:18:50.804743 [debug] [Thread-1 (]: SQL status: SELECT 1156 in 0.029 seconds
+[0m16:18:50.805923 [debug] [Thread-2 (]: On model.vietnam_air_quality.int_air_quality_weather: COMMIT
+[0m16:18:50.810683 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.fact_air_quality_hourly"
+[0m16:18:50.811771 [debug] [Thread-1 (]: On model.vietnam_air_quality.fact_air_quality_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_air_quality_hourly"} */
+alter table "vietnam_air_quality"."analytics_analytics"."fact_air_quality_hourly" rename to "fact_air_quality_hourly__dbt_backup"
+[0m16:18:50.813098 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.816605 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.fact_air_quality_hourly"
+[0m16:18:50.817293 [debug] [Thread-2 (]: SQL status: COMMIT in 0.006 seconds
+[0m16:18:50.818105 [debug] [Thread-1 (]: On model.vietnam_air_quality.fact_air_quality_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_air_quality_hourly"} */
+alter table "vietnam_air_quality"."analytics_analytics"."fact_air_quality_hourly__dbt_tmp" rename to "fact_air_quality_hourly"
+[0m16:18:50.820867 [debug] [Thread-2 (]: Applying DROP to: "vietnam_air_quality"."analytics_intermediate"."int_air_quality_weather__dbt_backup"
+[0m16:18:50.822561 [debug] [Thread-2 (]: Using postgres connection "model.vietnam_air_quality.int_air_quality_weather"
+[0m16:18:50.823151 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m16:18:50.823789 [debug] [Thread-2 (]: On model.vietnam_air_quality.int_air_quality_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.int_air_quality_weather"} */
+drop view if exists "vietnam_air_quality"."analytics_intermediate"."int_air_quality_weather__dbt_backup" cascade
+[0m16:18:50.826505 [debug] [Thread-1 (]: On model.vietnam_air_quality.fact_air_quality_hourly: COMMIT
+[0m16:18:50.827398 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.fact_air_quality_hourly"
+[0m16:18:50.827920 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m16:18:50.828469 [debug] [Thread-1 (]: On model.vietnam_air_quality.fact_air_quality_hourly: COMMIT
+[0m16:18:50.830227 [debug] [Thread-2 (]: On model.vietnam_air_quality.int_air_quality_weather: Close
+[0m16:18:50.831333 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff6043110>]}
+[0m16:18:50.831897 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m16:18:50.832753 [info ] [Thread-2 (]: 6 of 8 OK created sql view model analytics_intermediate.int_air_quality_weather  [[32mCREATE VIEW[0m in 0.09s]
+[0m16:18:50.834848 [debug] [Thread-1 (]: Applying DROP to: "vietnam_air_quality"."analytics_analytics"."fact_air_quality_hourly__dbt_backup"
+[0m16:18:50.835580 [debug] [Thread-2 (]: Finished running node model.vietnam_air_quality.int_air_quality_weather
+[0m16:18:50.836605 [debug] [Thread-1 (]: Using postgres connection "model.vietnam_air_quality.fact_air_quality_hourly"
+[0m16:18:50.837539 [debug] [Thread-1 (]: On model.vietnam_air_quality.fact_air_quality_hourly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.fact_air_quality_hourly"} */
+drop table if exists "vietnam_air_quality"."analytics_analytics"."fact_air_quality_hourly__dbt_backup" cascade
+[0m16:18:50.837976 [debug] [Thread-3 (]: Began running node model.vietnam_air_quality.mart_city_daily
+[0m16:18:50.838378 [debug] [Thread-4 (]: Began running node model.vietnam_air_quality.mart_pollution_weather
+[0m16:18:50.839132 [info ] [Thread-3 (]: 7 of 8 START sql table model analytics_analytics.mart_city_daily ............... [RUN]
+[0m16:18:50.839831 [info ] [Thread-4 (]: 8 of 8 START sql table model analytics_analytics.mart_pollution_weather ........ [RUN]
+[0m16:18:50.840442 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.vietnam_air_quality.int_hourly_air_quality, now model.vietnam_air_quality.mart_city_daily)
+[0m16:18:50.841001 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.vietnam_air_quality.fact_weather_hourly, now model.vietnam_air_quality.mart_pollution_weather)
+[0m16:18:50.841502 [debug] [Thread-3 (]: Began compiling node model.vietnam_air_quality.mart_city_daily
+[0m16:18:50.841940 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m16:18:50.842469 [debug] [Thread-4 (]: Began compiling node model.vietnam_air_quality.mart_pollution_weather
+[0m16:18:50.844733 [debug] [Thread-3 (]: Writing injected SQL for node "model.vietnam_air_quality.mart_city_daily"
+[0m16:18:50.846564 [debug] [Thread-1 (]: On model.vietnam_air_quality.fact_air_quality_hourly: Close
+[0m16:18:50.848673 [debug] [Thread-4 (]: Writing injected SQL for node "model.vietnam_air_quality.mart_pollution_weather"
+[0m16:18:50.849872 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff61bda90>]}
+[0m16:18:50.850373 [debug] [Thread-3 (]: Began executing node model.vietnam_air_quality.mart_city_daily
+[0m16:18:50.851344 [info ] [Thread-1 (]: 5 of 8 OK created sql table model analytics_analytics.fact_air_quality_hourly .. [[32mSELECT 1156[0m in 0.11s]
+[0m16:18:50.851896 [debug] [Thread-4 (]: Began executing node model.vietnam_air_quality.mart_pollution_weather
+[0m16:18:50.856113 [debug] [Thread-3 (]: Writing runtime sql for node "model.vietnam_air_quality.mart_city_daily"
+[0m16:18:50.856902 [debug] [Thread-1 (]: Finished running node model.vietnam_air_quality.fact_air_quality_hourly
+[0m16:18:50.860215 [debug] [Thread-4 (]: Writing runtime sql for node "model.vietnam_air_quality.mart_pollution_weather"
+[0m16:18:50.861305 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.mart_city_daily"
+[0m16:18:50.861938 [debug] [Thread-3 (]: On model.vietnam_air_quality.mart_city_daily: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_city_daily"} */
+
+  
+    
+
+  create  table "vietnam_air_quality"."analytics_analytics"."mart_city_daily__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH hourly AS (
+    SELECT * FROM "vietnam_air_quality"."analytics_intermediate"."int_air_quality_weather"
+),
+
+daily AS (
+    SELECT
+        city,
+        DATE(timestamp_utc) AS date,
+        AVG(pm25) AS avg_pm25,
+        AVG(pm10) AS avg_pm10,
+        MAX(pm25) AS max_pm25,
+        MAX(pm10) AS max_pm10,
+        AVG(temperature) AS avg_temperature,
+        AVG(relative_humidity) AS avg_humidity,
+        AVG(wind_speed) AS avg_wind_speed,
+        SUM(precipitation) AS total_precipitation,
+        COUNT(*) AS record_count
+    FROM hourly
+    GROUP BY city, DATE(timestamp_utc)
+)
+
+SELECT * FROM daily
+  );
+  
+[0m16:18:50.862512 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.mart_pollution_weather"
+[0m16:18:50.862941 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:18:50.863429 [debug] [Thread-4 (]: On model.vietnam_air_quality.mart_pollution_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_pollution_weather"} */
+
+  
+    
+
+  create  table "vietnam_air_quality"."analytics_analytics"."mart_pollution_weather__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH joined AS (
+    SELECT * FROM "vietnam_air_quality"."analytics_intermediate"."int_air_quality_weather"
+),
+
+classified AS (
+    SELECT
+        *,
+        CASE
+            WHEN pm25 <= 12 THEN 'Good'
+            WHEN pm25 <= 35.4 THEN 'Moderate'
+            WHEN pm25 <= 55.4 THEN 'Unhealthy for Sensitive Groups'
+            WHEN pm25 <= 150.4 THEN 'Unhealthy'
+            WHEN pm25 <= 250.4 THEN 'Very Unhealthy'
+            ELSE 'Hazardous'
+        END AS pollution_level
+    FROM joined
+)
+
+SELECT * FROM classified
+  );
+  
+[0m16:18:50.864168 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:18:50.887178 [debug] [Thread-3 (]: SQL status: SELECT 26 in 0.024 seconds
+[0m16:18:50.890628 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.mart_city_daily"
+[0m16:18:50.891463 [debug] [Thread-3 (]: On model.vietnam_air_quality.mart_city_daily: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_city_daily"} */
+alter table "vietnam_air_quality"."analytics_analytics"."mart_city_daily" rename to "mart_city_daily__dbt_backup"
+[0m16:18:50.892484 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.895562 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.mart_city_daily"
+[0m16:18:50.896365 [debug] [Thread-3 (]: On model.vietnam_air_quality.mart_city_daily: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_city_daily"} */
+alter table "vietnam_air_quality"."analytics_analytics"."mart_city_daily__dbt_tmp" rename to "mart_city_daily"
+[0m16:18:50.897531 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m16:18:50.900735 [debug] [Thread-3 (]: On model.vietnam_air_quality.mart_city_daily: COMMIT
+[0m16:18:50.901509 [debug] [Thread-4 (]: SQL status: SELECT 11408 in 0.037 seconds
+[0m16:18:50.902301 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.mart_city_daily"
+[0m16:18:50.908905 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.mart_pollution_weather"
+[0m16:18:50.909612 [debug] [Thread-3 (]: On model.vietnam_air_quality.mart_city_daily: COMMIT
+[0m16:18:50.910438 [debug] [Thread-4 (]: On model.vietnam_air_quality.mart_pollution_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_pollution_weather"} */
+alter table "vietnam_air_quality"."analytics_analytics"."mart_pollution_weather" rename to "mart_pollution_weather__dbt_backup"
+[0m16:18:50.912316 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.915688 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.mart_pollution_weather"
+[0m16:18:50.916155 [debug] [Thread-3 (]: SQL status: COMMIT in 0.005 seconds
+[0m16:18:50.916713 [debug] [Thread-4 (]: On model.vietnam_air_quality.mart_pollution_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_pollution_weather"} */
+alter table "vietnam_air_quality"."analytics_analytics"."mart_pollution_weather__dbt_tmp" rename to "mart_pollution_weather"
+[0m16:18:50.918824 [debug] [Thread-3 (]: Applying DROP to: "vietnam_air_quality"."analytics_analytics"."mart_city_daily__dbt_backup"
+[0m16:18:50.920169 [debug] [Thread-3 (]: Using postgres connection "model.vietnam_air_quality.mart_city_daily"
+[0m16:18:50.920762 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:18:50.921550 [debug] [Thread-3 (]: On model.vietnam_air_quality.mart_city_daily: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_city_daily"} */
+drop table if exists "vietnam_air_quality"."analytics_analytics"."mart_city_daily__dbt_backup" cascade
+[0m16:18:50.925748 [debug] [Thread-4 (]: On model.vietnam_air_quality.mart_pollution_weather: COMMIT
+[0m16:18:50.927034 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.mart_pollution_weather"
+[0m16:18:50.927795 [debug] [Thread-4 (]: On model.vietnam_air_quality.mart_pollution_weather: COMMIT
+[0m16:18:50.928990 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m16:18:50.930811 [debug] [Thread-3 (]: On model.vietnam_air_quality.mart_city_daily: Close
+[0m16:18:50.931458 [debug] [Thread-4 (]: SQL status: COMMIT in 0.003 seconds
+[0m16:18:50.932589 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff60a49d0>]}
+[0m16:18:50.934732 [debug] [Thread-4 (]: Applying DROP to: "vietnam_air_quality"."analytics_analytics"."mart_pollution_weather__dbt_backup"
+[0m16:18:50.935932 [info ] [Thread-3 (]: 7 of 8 OK created sql table model analytics_analytics.mart_city_daily .......... [[32mSELECT 26[0m in 0.09s]
+[0m16:18:50.937295 [debug] [Thread-4 (]: Using postgres connection "model.vietnam_air_quality.mart_pollution_weather"
+[0m16:18:50.938088 [debug] [Thread-3 (]: Finished running node model.vietnam_air_quality.mart_city_daily
+[0m16:18:50.938668 [debug] [Thread-4 (]: On model.vietnam_air_quality.mart_pollution_weather: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "model.vietnam_air_quality.mart_pollution_weather"} */
+drop table if exists "vietnam_air_quality"."analytics_analytics"."mart_pollution_weather__dbt_backup" cascade
+[0m16:18:50.941743 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m16:18:50.944344 [debug] [Thread-4 (]: On model.vietnam_air_quality.mart_pollution_weather: Close
+[0m16:18:50.946017 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8455d05-1e85-46ad-9e5f-1dc5af5d66b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ff6087690>]}
+[0m16:18:50.947429 [info ] [Thread-4 (]: 8 of 8 OK created sql table model analytics_analytics.mart_pollution_weather ... [[32mSELECT 11408[0m in 0.10s]
+[0m16:18:50.948801 [debug] [Thread-4 (]: Finished running node model.vietnam_air_quality.mart_pollution_weather
+[0m16:18:50.951328 [debug] [MainThread]: On master: COMMIT
+[0m16:18:50.952031 [debug] [MainThread]: Using postgres connection "master"
+[0m16:18:50.953442 [debug] [MainThread]: On master: COMMIT
+[0m16:18:50.954770 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:18:50.961670 [debug] [MainThread]: SQL status: COMMIT in 0.007 seconds
+[0m16:18:50.962346 [debug] [MainThread]: On master: Close
+[0m16:18:50.963068 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:18:50.963547 [debug] [MainThread]: Connection 'model.vietnam_air_quality.int_air_quality_weather' was properly closed.
+[0m16:18:50.963972 [debug] [MainThread]: Connection 'model.vietnam_air_quality.mart_city_daily' was properly closed.
+[0m16:18:50.964367 [debug] [MainThread]: Connection 'model.vietnam_air_quality.fact_air_quality_hourly' was properly closed.
+[0m16:18:50.964750 [debug] [MainThread]: Connection 'model.vietnam_air_quality.mart_pollution_weather' was properly closed.
+[0m16:18:50.965312 [info ] [MainThread]: 
+[0m16:18:50.965797 [info ] [MainThread]: Finished running 4 table models, 4 view models in 0 hours 0 minutes and 0.81 seconds (0.81s).
+[0m16:18:50.967255 [debug] [MainThread]: Command end result
+[0m16:18:51.011044 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/manifest.json
+[0m16:18:51.013699 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/semantic_manifest.json
+[0m16:18:51.016728 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/code/dbt/vietnam_air_quality/target/osi_document.json
+[0m16:18:51.025488 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/code/dbt/vietnam_air_quality/target/run_results.json
+[0m16:18:51.026126 [info ] [MainThread]: 
+[0m16:18:51.026671 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:18:51.027110 [info ] [MainThread]: 
+[0m16:18:51.027533 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=8
+[0m16:18:51.028698 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7304803, "process_in_blocks": "17904", "process_kernel_time": 0.406316, "process_mem_max_rss": "147864", "process_out_blocks": "4434", "process_user_time": 3.993864}
+[0m16:18:51.029364 [debug] [MainThread]: Command `dbt run` succeeded at 16:18:51.029258 after 1.73 seconds
+[0m16:18:51.029877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffa164210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffa15e990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ffec10d10>]}
+[0m16:18:51.031366 [debug] [MainThread]: Flushing usage events
+[0m16:18:53.314395 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:18:57.684533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b7d3e710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72baa527d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b7f80890>]}
+
+
+============================== 16:18:57.694874 | 4b8a499c-0243-4b4d-bb98-90c2acb78922 ==============================
+[0m16:18:57.694874 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:18:57.696270 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'write_json': 'True', 'partial_parse': 'True', 'log_path': '/opt/airflow/code/dbt/vietnam_air_quality/logs', 'no_print': 'None', 'debug': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'static_parser': 'True', 'warn_error': 'None', 'use_colors': 'True', 'profiles_dir': '/opt/airflow/code/dbt/profiles', 'introspect': 'True', 'empty': 'None', 'invocation_command': 'dbt test --profiles-dir /opt/airflow/code/dbt/profiles --project-dir /opt/airflow/code/dbt/vietnam_air_quality', 'quiet': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'hints_enabled': 'True'}
+[0m16:18:57.888763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b8a499c-0243-4b4d-bb98-90c2acb78922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b75e6790>]}
+[0m16:18:57.957170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b8a499c-0243-4b4d-bb98-90c2acb78922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72baa792d0>]}
+[0m16:18:57.958651 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m16:18:58.108034 [debug] [MainThread]: checksum: 0939ea72253789066c52afdf564c89d2a6053675aa36a0867826a9fdd7a38f70, vars: {}, profile: vietnam_air_quality, target: dev, version: 1.12.5
+[0m16:18:58.261883 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:18:58.262577 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:18:58.263319 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:18:58.276695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b8a499c-0243-4b4d-bb98-90c2acb78922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b5d12610>]}
+[0m16:18:58.452718 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/manifest.json
+[0m16:18:58.456951 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/semantic_manifest.json
+[0m16:18:58.478004 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/code/dbt/vietnam_air_quality/target/osi_document.json
+[0m16:18:58.521070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b8a499c-0243-4b4d-bb98-90c2acb78922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b583bfd0>]}
+[0m16:18:58.522394 [info ] [MainThread]: Found 8 models, 10 data tests, 2 sources, 477 macros
+[0m16:18:58.523264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b8a499c-0243-4b4d-bb98-90c2acb78922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b5867c50>]}
+[0m16:18:58.527888 [info ] [MainThread]: 
+[0m16:18:58.528842 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:18:58.529619 [info ] [MainThread]: 
+[0m16:18:58.530772 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:18:58.539450 [debug] [ThreadPool]: Acquiring new postgres connection 'list_vietnam_air_quality_analytics_analytics'
+[0m16:18:58.540745 [debug] [ThreadPool]: Acquiring new postgres connection 'list_vietnam_air_quality_analytics_staging'
+[0m16:18:58.542234 [debug] [ThreadPool]: Acquiring new postgres connection 'list_vietnam_air_quality_analytics_intermediate'
+[0m16:18:58.583068 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality_analytics_analytics"
+[0m16:18:58.583760 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality_analytics_staging"
+[0m16:18:58.584713 [debug] [ThreadPool]: Using postgres connection "list_vietnam_air_quality_analytics_intermediate"
+[0m16:18:58.585924 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality_analytics_analytics"} */
+select
+      'vietnam_air_quality' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select distinct
+     'vietnam_air_quality' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_analytics'
+  
+[0m16:18:58.586839 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality_analytics_staging"} */
+select
+      'vietnam_air_quality' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+    union all
+    select distinct
+     'vietnam_air_quality' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_staging'
+  
+[0m16:18:58.587991 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "list_vietnam_air_quality_analytics_intermediate"} */
+select
+      'vietnam_air_quality' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_intermediate'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_intermediate'
+    union all
+    select
+      'vietnam_air_quality' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_intermediate'
+    union all
+    select distinct
+     'vietnam_air_quality' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_intermediate'
+  
+[0m16:18:58.589255 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:18:58.590159 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:18:58.591141 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:18:58.605926 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.017 seconds
+[0m16:18:58.606760 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.017 seconds
+[0m16:18:58.607620 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.016 seconds
+[0m16:18:58.610357 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_analytics: ROLLBACK
+[0m16:18:58.613187 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_staging: ROLLBACK
+[0m16:18:58.615698 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_intermediate: ROLLBACK
+[0m16:18:58.617251 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_analytics: Close
+[0m16:18:58.618229 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_staging: Close
+[0m16:18:58.619408 [debug] [ThreadPool]: On list_vietnam_air_quality_analytics_intermediate: Close
+[0m16:18:58.630617 [debug] [MainThread]: Using postgres connection "master"
+[0m16:18:58.631860 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:18:58.632767 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:18:58.645488 [debug] [MainThread]: SQL status: SELECT 5 in 0.013 seconds
+[0m16:18:58.648503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b8a499c-0243-4b4d-bb98-90c2acb78922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b4410610>]}
+[0m16:18:58.649341 [debug] [MainThread]: On master: ROLLBACK
+[0m16:18:58.650275 [debug] [MainThread]: On master: COMMIT
+[0m16:18:58.651475 [debug] [MainThread]: Using postgres connection "master"
+[0m16:18:58.652304 [debug] [MainThread]: On master: COMMIT
+[0m16:18:58.653321 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:18:58.654203 [debug] [MainThread]: On master: Close
+[0m16:18:58.661547 [debug] [Thread-1 (]: Began running node test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77
+[0m16:18:58.662507 [debug] [Thread-2 (]: Began running node test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064
+[0m16:18:58.663403 [debug] [Thread-3 (]: Began running node test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d
+[0m16:18:58.664162 [debug] [Thread-4 (]: Began running node test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c
+[0m16:18:58.665195 [info ] [Thread-1 (]: 1 of 10 START test accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2  [RUN]
+[0m16:18:58.666106 [info ] [Thread-2 (]: 2 of 10 START test not_null_stg_air_quality_city ............................... [RUN]
+[0m16:18:58.667160 [info ] [Thread-3 (]: 3 of 10 START test not_null_stg_air_quality_id ................................. [RUN]
+[0m16:18:58.668248 [info ] [Thread-4 (]: 4 of 10 START test not_null_stg_air_quality_parameter .......................... [RUN]
+[0m16:18:58.669410 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_vietnam_air_quality_analytics_intermediate, now test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77)
+[0m16:18:58.670342 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_vietnam_air_quality_analytics_staging, now test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064)
+[0m16:18:58.671450 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_vietnam_air_quality_analytics_analytics, now test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d)
+[0m16:18:58.672720 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c'
+[0m16:18:58.673788 [debug] [Thread-1 (]: Began compiling node test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77
+[0m16:18:58.674677 [debug] [Thread-2 (]: Began compiling node test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064
+[0m16:18:58.675679 [debug] [Thread-3 (]: Began compiling node test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d
+[0m16:18:58.676626 [debug] [Thread-4 (]: Began compiling node test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c
+[0m16:18:58.736353 [debug] [Thread-2 (]: Writing injected SQL for node "test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064"
+[0m16:18:58.738458 [debug] [Thread-1 (]: Writing injected SQL for node "test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77"
+[0m16:18:58.749321 [debug] [Thread-3 (]: Writing injected SQL for node "test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d"
+[0m16:18:58.760823 [debug] [Thread-4 (]: Writing injected SQL for node "test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c"
+[0m16:18:58.762821 [debug] [Thread-2 (]: Began executing node test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064
+[0m16:18:58.763806 [debug] [Thread-1 (]: Began executing node test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77
+[0m16:18:58.784967 [debug] [Thread-2 (]: Writing runtime sql for node "test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064"
+[0m16:18:58.785934 [debug] [Thread-3 (]: Began executing node test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d
+[0m16:18:58.789352 [debug] [Thread-1 (]: Writing runtime sql for node "test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77"
+[0m16:18:58.790078 [debug] [Thread-4 (]: Began executing node test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c
+[0m16:18:58.794363 [debug] [Thread-3 (]: Writing runtime sql for node "test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d"
+[0m16:18:58.796281 [debug] [Thread-2 (]: Using postgres connection "test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064"
+[0m16:18:58.796971 [debug] [Thread-1 (]: Using postgres connection "test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77"
+[0m16:18:58.800383 [debug] [Thread-4 (]: Writing runtime sql for node "test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c"
+[0m16:18:58.801842 [debug] [Thread-2 (]: On test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select city
+from "vietnam_air_quality"."analytics_staging"."stg_air_quality"
+where city is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.802542 [debug] [Thread-1 (]: On test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        parameter as value_field,
+        count(*) as n_records
+
+    from "vietnam_air_quality"."analytics_staging"."stg_air_quality"
+    group by parameter
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'pm25','pm10','pm1','co','no2','o3','so2'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.803312 [debug] [Thread-3 (]: Using postgres connection "test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d"
+[0m16:18:58.804580 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:18:58.805180 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:58.805858 [debug] [Thread-4 (]: Using postgres connection "test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c"
+[0m16:18:58.807092 [debug] [Thread-3 (]: On test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "vietnam_air_quality"."analytics_staging"."stg_air_quality"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.808953 [debug] [Thread-4 (]: On test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select parameter
+from "vietnam_air_quality"."analytics_staging"."stg_air_quality"
+where parameter is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.809888 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:18:58.810611 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:18:58.814580 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m16:18:58.819354 [debug] [Thread-2 (]: On test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064: ROLLBACK
+[0m16:18:58.820158 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m16:18:58.821291 [debug] [Thread-2 (]: On test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064: Close
+[0m16:18:58.822029 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m16:18:58.824078 [debug] [Thread-1 (]: On test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77: ROLLBACK
+[0m16:18:58.824617 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m16:18:58.826146 [info ] [Thread-2 (]: 2 of 10 PASS not_null_stg_air_quality_city ..................................... [[32mPASS[0m in 0.16s]
+[0m16:18:58.829278 [debug] [Thread-3 (]: On test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d: ROLLBACK
+[0m16:18:58.831003 [debug] [Thread-1 (]: On test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77: Close
+[0m16:18:58.832651 [debug] [Thread-4 (]: On test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c: ROLLBACK
+[0m16:18:58.833824 [debug] [Thread-2 (]: Finished running node test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064
+[0m16:18:58.834984 [debug] [Thread-3 (]: On test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d: Close
+[0m16:18:58.836417 [info ] [Thread-1 (]: 1 of 10 PASS accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2  [[32mPASS[0m in 0.17s]
+[0m16:18:58.837661 [debug] [Thread-4 (]: On test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c: Close
+[0m16:18:58.838452 [debug] [Thread-2 (]: Began running node test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94
+[0m16:18:58.839957 [info ] [Thread-3 (]: 3 of 10 PASS not_null_stg_air_quality_id ....................................... [[32mPASS[0m in 0.17s]
+[0m16:18:58.841240 [debug] [Thread-1 (]: Finished running node test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77
+[0m16:18:58.842437 [info ] [Thread-4 (]: 4 of 10 PASS not_null_stg_air_quality_parameter ................................ [[32mPASS[0m in 0.17s]
+[0m16:18:58.843475 [info ] [Thread-2 (]: 5 of 10 START test not_null_stg_air_quality_timestamp_utc ...................... [RUN]
+[0m16:18:58.844607 [debug] [Thread-3 (]: Finished running node test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d
+[0m16:18:58.845655 [debug] [Thread-1 (]: Began running node test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127
+[0m16:18:58.846943 [debug] [Thread-4 (]: Finished running node test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c
+[0m16:18:58.848081 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.vietnam_air_quality.not_null_stg_air_quality_city.2c545f7064, now test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94)
+[0m16:18:58.848760 [debug] [Thread-3 (]: Began running node test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23
+[0m16:18:58.849597 [info ] [Thread-1 (]: 6 of 10 START test not_null_stg_weather_city ................................... [RUN]
+[0m16:18:58.850525 [debug] [Thread-4 (]: Began running node test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9
+[0m16:18:58.851251 [debug] [Thread-2 (]: Began compiling node test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94
+[0m16:18:58.851867 [info ] [Thread-3 (]: 7 of 10 START test not_null_stg_weather_id ..................................... [RUN]
+[0m16:18:58.852669 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vietnam_air_quality.accepted_values_stg_air_quality_parameter__pm25__pm10__pm1__co__no2__o3__so2.b1c7fd0f77, now test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127)
+[0m16:18:58.853469 [info ] [Thread-4 (]: 8 of 10 START test not_null_stg_weather_timestamp .............................. [RUN]
+[0m16:18:58.860644 [debug] [Thread-2 (]: Writing injected SQL for node "test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94"
+[0m16:18:58.861423 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.vietnam_air_quality.not_null_stg_air_quality_id.73b90bdf8d, now test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23)
+[0m16:18:58.862353 [debug] [Thread-1 (]: Began compiling node test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127
+[0m16:18:58.863242 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.vietnam_air_quality.not_null_stg_air_quality_parameter.c4f9cf307c, now test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9)
+[0m16:18:58.864180 [debug] [Thread-3 (]: Began compiling node test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23
+[0m16:18:58.864715 [debug] [Thread-2 (]: Began executing node test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94
+[0m16:18:58.872725 [debug] [Thread-1 (]: Writing injected SQL for node "test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127"
+[0m16:18:58.873412 [debug] [Thread-4 (]: Began compiling node test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9
+[0m16:18:58.880332 [debug] [Thread-3 (]: Writing injected SQL for node "test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23"
+[0m16:18:58.883936 [debug] [Thread-2 (]: Writing runtime sql for node "test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94"
+[0m16:18:58.891764 [debug] [Thread-4 (]: Writing injected SQL for node "test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9"
+[0m16:18:58.892683 [debug] [Thread-1 (]: Began executing node test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127
+[0m16:18:58.893597 [debug] [Thread-3 (]: Began executing node test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23
+[0m16:18:58.895082 [debug] [Thread-2 (]: Using postgres connection "test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94"
+[0m16:18:58.897337 [debug] [Thread-1 (]: Writing runtime sql for node "test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127"
+[0m16:18:58.897818 [debug] [Thread-4 (]: Began executing node test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9
+[0m16:18:58.899969 [debug] [Thread-3 (]: Writing runtime sql for node "test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23"
+[0m16:18:58.900875 [debug] [Thread-2 (]: On test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select timestamp_utc
+from "vietnam_air_quality"."analytics_staging"."stg_air_quality"
+where timestamp_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.903727 [debug] [Thread-4 (]: Writing runtime sql for node "test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9"
+[0m16:18:58.904342 [debug] [Thread-1 (]: Using postgres connection "test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127"
+[0m16:18:58.905282 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:18:58.906078 [debug] [Thread-3 (]: Using postgres connection "test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23"
+[0m16:18:58.906821 [debug] [Thread-1 (]: On test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select city
+from "vietnam_air_quality"."analytics_staging"."stg_weather"
+where city is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.907474 [debug] [Thread-4 (]: Using postgres connection "test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9"
+[0m16:18:58.908627 [debug] [Thread-3 (]: On test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "vietnam_air_quality"."analytics_staging"."stg_weather"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.909222 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:58.909794 [debug] [Thread-4 (]: On test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select timestamp
+from "vietnam_air_quality"."analytics_staging"."stg_weather"
+where timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.910357 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:18:58.911214 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:18:58.916070 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m16:18:58.917872 [debug] [Thread-2 (]: On test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94: ROLLBACK
+[0m16:18:58.918690 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m16:18:58.919797 [debug] [Thread-2 (]: On test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94: Close
+[0m16:18:58.920391 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m16:18:58.921210 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m16:18:58.923660 [debug] [Thread-1 (]: On test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127: ROLLBACK
+[0m16:18:58.924707 [info ] [Thread-2 (]: 5 of 10 PASS not_null_stg_air_quality_timestamp_utc ............................ [[32mPASS[0m in 0.08s]
+[0m16:18:58.927176 [debug] [Thread-3 (]: On test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23: ROLLBACK
+[0m16:18:58.929519 [debug] [Thread-4 (]: On test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9: ROLLBACK
+[0m16:18:58.930925 [debug] [Thread-2 (]: Finished running node test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94
+[0m16:18:58.931429 [debug] [Thread-1 (]: On test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127: Close
+[0m16:18:58.932447 [debug] [Thread-3 (]: On test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23: Close
+[0m16:18:58.933400 [debug] [Thread-2 (]: Began running node test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10
+[0m16:18:58.933910 [debug] [Thread-4 (]: On test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9: Close
+[0m16:18:58.935409 [info ] [Thread-1 (]: 6 of 10 PASS not_null_stg_weather_city ......................................... [[32mPASS[0m in 0.08s]
+[0m16:18:58.936809 [info ] [Thread-3 (]: 7 of 10 PASS not_null_stg_weather_id ........................................... [[32mPASS[0m in 0.08s]
+[0m16:18:58.937684 [info ] [Thread-2 (]: 9 of 10 START test unique_stg_air_quality_id ................................... [RUN]
+[0m16:18:58.939259 [info ] [Thread-4 (]: 8 of 10 PASS not_null_stg_weather_timestamp .................................... [[32mPASS[0m in 0.08s]
+[0m16:18:58.940638 [debug] [Thread-1 (]: Finished running node test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127
+[0m16:18:58.941947 [debug] [Thread-3 (]: Finished running node test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23
+[0m16:18:58.943071 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.vietnam_air_quality.not_null_stg_air_quality_timestamp_utc.715da8ad94, now test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10)
+[0m16:18:58.944212 [debug] [Thread-4 (]: Finished running node test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9
+[0m16:18:58.945176 [debug] [Thread-1 (]: Began running node test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe
+[0m16:18:58.946418 [debug] [Thread-2 (]: Began compiling node test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10
+[0m16:18:58.947510 [info ] [Thread-1 (]: 10 of 10 START test unique_stg_weather_id ...................................... [RUN]
+[0m16:18:58.956801 [debug] [Thread-2 (]: Writing injected SQL for node "test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10"
+[0m16:18:58.957868 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vietnam_air_quality.not_null_stg_weather_city.c03e0c0127, now test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe)
+[0m16:18:58.959172 [debug] [Thread-1 (]: Began compiling node test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe
+[0m16:18:58.959940 [debug] [Thread-2 (]: Began executing node test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10
+[0m16:18:58.968279 [debug] [Thread-1 (]: Writing injected SQL for node "test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe"
+[0m16:18:58.970564 [debug] [Thread-2 (]: Writing runtime sql for node "test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10"
+[0m16:18:58.972062 [debug] [Thread-1 (]: Began executing node test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe
+[0m16:18:58.972643 [debug] [Thread-2 (]: Using postgres connection "test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10"
+[0m16:18:58.974534 [debug] [Thread-1 (]: Writing runtime sql for node "test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe"
+[0m16:18:58.975126 [debug] [Thread-2 (]: On test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "vietnam_air_quality"."analytics_staging"."stg_air_quality"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.976085 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:18:58.976602 [debug] [Thread-1 (]: Using postgres connection "test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe"
+[0m16:18:58.977518 [debug] [Thread-1 (]: On test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "vietnam_air_quality", "target_name": "dev", "node_id": "test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "vietnam_air_quality"."analytics_staging"."stg_weather"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:58.978076 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:58.989515 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m16:18:58.990442 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m16:18:58.992899 [debug] [Thread-2 (]: On test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10: ROLLBACK
+[0m16:18:58.994953 [debug] [Thread-1 (]: On test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe: ROLLBACK
+[0m16:18:58.996091 [debug] [Thread-2 (]: On test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10: Close
+[0m16:18:58.996724 [debug] [Thread-1 (]: On test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe: Close
+[0m16:18:58.997600 [info ] [Thread-2 (]: 9 of 10 PASS unique_stg_air_quality_id ......................................... [[32mPASS[0m in 0.05s]
+[0m16:18:58.998886 [info ] [Thread-1 (]: 10 of 10 PASS unique_stg_weather_id ............................................ [[32mPASS[0m in 0.04s]
+[0m16:18:58.999843 [debug] [Thread-2 (]: Finished running node test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10
+[0m16:18:59.000895 [debug] [Thread-1 (]: Finished running node test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe
+[0m16:18:59.003468 [debug] [MainThread]: On master: COMMIT
+[0m16:18:59.004583 [debug] [MainThread]: Using postgres connection "master"
+[0m16:18:59.005236 [debug] [MainThread]: On master: COMMIT
+[0m16:18:59.006013 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:18:59.013845 [debug] [MainThread]: SQL status: COMMIT in 0.008 seconds
+[0m16:18:59.015000 [debug] [MainThread]: On master: Close
+[0m16:18:59.016095 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:18:59.016820 [debug] [MainThread]: Connection 'test.vietnam_air_quality.not_null_stg_weather_id.0e1828fa23' was properly closed.
+[0m16:18:59.017506 [debug] [MainThread]: Connection 'test.vietnam_air_quality.unique_stg_air_quality_id.2192250e10' was properly closed.
+[0m16:18:59.018189 [debug] [MainThread]: Connection 'test.vietnam_air_quality.unique_stg_weather_id.c42c665fbe' was properly closed.
+[0m16:18:59.018833 [debug] [MainThread]: Connection 'test.vietnam_air_quality.not_null_stg_weather_timestamp.728a1b32f9' was properly closed.
+[0m16:18:59.019640 [info ] [MainThread]: 
+[0m16:18:59.020436 [info ] [MainThread]: Finished running 10 data tests in 0 hours 0 minutes and 0.49 seconds (0.49s).
+[0m16:18:59.024231 [debug] [MainThread]: Command end result
+[0m16:18:59.129470 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/manifest.json
+[0m16:18:59.133446 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/code/dbt/vietnam_air_quality/target/semantic_manifest.json
+[0m16:18:59.137012 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/code/dbt/vietnam_air_quality/target/osi_document.json
+[0m16:18:59.146900 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/code/dbt/vietnam_air_quality/target/run_results.json
+[0m16:18:59.147539 [info ] [MainThread]: 
+[0m16:18:59.148076 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:18:59.148526 [info ] [MainThread]: 
+[0m16:18:59.149001 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=10
+[0m16:18:59.150296 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.5473915, "process_in_blocks": "480", "process_kernel_time": 0.254912, "process_mem_max_rss": "147808", "process_out_blocks": "2431", "process_user_time": 3.474794}
+[0m16:18:59.150968 [debug] [MainThread]: Command `dbt test` succeeded at 16:18:59.150852 after 1.55 seconds
+[0m16:18:59.151494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72bc8bc290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72bc978c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72b9236150>]}
+[0m16:18:59.152083 [debug] [MainThread]: Flushing usage events
+[0m16:19:00.384694 [debug] [MainThread]: An error was encountered while trying to flush usage events
