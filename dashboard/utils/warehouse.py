@@ -26,12 +26,12 @@ def query_to_df(sql: str) -> pd.DataFrame:
 
 
 def get_city_daily() -> pd.DataFrame:
-    return query_to_df("SELECT * FROM analytics.mart_city_daily ORDER BY date DESC")
+    return query_to_df("SELECT * FROM analytics_analytics.mart_city_daily ORDER BY date DESC")
 
 
 def get_pollution_weather() -> pd.DataFrame:
     return query_to_df("""
-        SELECT * FROM analytics.mart_pollution_weather
+        SELECT * FROM analytics_analytics.mart_pollution_weather
         ORDER BY timestamp_utc DESC
         LIMIT 10000
     """)
@@ -39,7 +39,7 @@ def get_pollution_weather() -> pd.DataFrame:
 
 def get_air_quality_hourly() -> pd.DataFrame:
     return query_to_df("""
-        SELECT * FROM analytics.fact_air_quality_hourly
+        SELECT * FROM analytics_analytics.fact_air_quality_hourly
         ORDER BY timestamp_utc DESC
         LIMIT 10000
     """)
@@ -47,7 +47,7 @@ def get_air_quality_hourly() -> pd.DataFrame:
 
 def get_weather_hourly() -> pd.DataFrame:
     return query_to_df("""
-        SELECT * FROM analytics.fact_weather_hourly
+        SELECT * FROM analytics_analytics.fact_weather_hourly
         ORDER BY timestamp DESC
         LIMIT 10000
     """)
