@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: mart_city_pm25_comparison
+    description: >
+      Station-balanced daily PM2.5 comparison per city. One row per city per
+      date. avg_pm25 is the mean of the station-level daily averages, giving
+      each monitoring station equal weight regardless of reporting frequency.
+    columns:
+      - name: city
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Hanoi', 'Ho Chi Minh City']
+      - name: date
+        tests:
+          - not_null
+      - name: avg_pm25
+        tests:
+          - not_null
+      - name: station_count
+        tests:
+          - not_null
+      - name: measurement_count
+        tests:
+          - not_null
