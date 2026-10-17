@@ -32,7 +32,6 @@ fig2 = px.scatter(
     x="relative_humidity", y="pm25", color="city",
     title="Humidity vs PM2.5",
     labels={"relative_humidity": "Humidity (%)", "pm25": "PM2.5 (µg/m³)"},
-    trendline="ols",
 )
 st.plotly_chart(fig2, use_container_width=True)
 
@@ -42,7 +41,6 @@ fig3 = px.scatter(
     x="wind_speed", y="pm25", color="city",
     title="Wind Speed vs PM2.5",
     labels={"wind_speed": "Wind (km/h)", "pm25": "PM2.5 (µg/m³)"},
-    trendline="ols",
 )
 st.plotly_chart(fig3, use_container_width=True)
 

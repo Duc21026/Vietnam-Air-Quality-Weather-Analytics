@@ -29,6 +29,12 @@ def get_city_daily() -> pd.DataFrame:
     return query_to_df("SELECT * FROM analytics_analytics.mart_city_daily ORDER BY date DESC")
 
 
+def get_city_pm25_comparison() -> pd.DataFrame:
+    return query_to_df(
+        "SELECT * FROM analytics_analytics.mart_city_pm25_comparison ORDER BY date"
+    )
+
+
 def get_pollution_weather() -> pd.DataFrame:
     return query_to_df("""
         SELECT * FROM analytics_analytics.mart_pollution_weather
