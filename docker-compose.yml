@@ -135,6 +135,7 @@ services:
       dockerfile: Dockerfile
     container_name: vaq_dashboard
     environment:
+      PYTHONPATH: /app
       WAREHOUSE_HOST: warehouse-db
       WAREHOUSE_PORT: "5432"
       POSTGRES_USER: ${POSTGRES_USER:-vt_analytics}

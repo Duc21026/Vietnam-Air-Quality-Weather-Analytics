@@ -27,6 +27,7 @@ sqlalchemy
 # --- Dashboard (Streamlit) ---
 streamlit
 plotly
+statsmodels
 
 # --- Transformation (dbt) ---
 dbt-postgres
