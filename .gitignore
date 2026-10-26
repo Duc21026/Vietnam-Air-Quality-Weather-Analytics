@@ -14,4 +14,8 @@ airflow/logs/*
 lake/raw/**/*
 lake/processed/**/*
 !lake/**/.gitkeep
-.cache*
+.cache*./
+.specify/
+.opencode/
+.github/
+specs/
